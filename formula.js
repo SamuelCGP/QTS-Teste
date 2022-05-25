@@ -16,6 +16,7 @@ function calcular(){
         alert('É necessário informar o sexo!')
     }
     
+    // validação pode ser feita na interface HTML e este método permite valores flutuantes
     if(idade <= 0 || idade > 100 || altura <= 0 || altura > 300 || peso <= 0 || peso > 600){
         alert('Informações inválidas')
     }else{
@@ -28,6 +29,7 @@ function calcular(){
         var arredondando = Math.round(TMB)
         res.innerHTML = `${arredondando} Kcal/Dia`
         
+        // Ao invés de fazer essa maracutaia, vamos mudar o estilo pela classe css
         res.style.color = 'Green'
         res.style.fontSize = '22pt'
         res.style.textAlign = 'center'
@@ -38,6 +40,7 @@ function calcular(){
         btn.appendChild(btntxt) 
         document.getElementById('calcular').appendChild(btn)
         
+        // Ao invés de fazer essa maracutaia, vamos mudar o estilo pela classe css
         btn.style.padding = '10px 16px'
         btn.style.width = '100%'
         btn.style.backgroundColor = 'green'
@@ -54,6 +57,7 @@ function calcular(){
         button.style.opacity = '0.5'
 
         btn.addEventListener('click', function() {
+            // fazer um caminho relativo e o arquivo ainda não existe
             location.href = "file:///C:/Users/Aluno/Downloads/ProjetoDieta-4.0/tela2/tela2.html";
         })
 
