@@ -17,6 +17,8 @@
             <br><br>
                 <label id="radio">Masculino
                     <input type="radio" name="sexo" id="masc">
+                    <!--Mudar o id para "masculino"-->
+
                     <span id="checkmark"></span>
                 </label>    
                 <label id="radio" for="feminino">Feminino                
@@ -27,15 +29,19 @@
         <div id="cx1">
             <label for="idade">Idade: </label> 
             <input type="number" name="idade" id="idade">
+            <!--Adicionar min="1" e max="100" para impedir a seleção de números negativos ou flutuantes pela seta-->
+            <!--Adicionar oninput="validity.valid||(value='');" para impedir a digitação de valores flutuantes ou negativos-->
             
         </div>
         <div id="cx2">
             <label for="altura">Altura: </label>
             <input type="number" placeholder="em CM (não use vírgulas)" name="altura" id="altura">
+            <!--Adicionar min="1", max="300" e oninput="validity.valid||(value='');"-->
         </div>
         <div id="cx3">
             <label for="peso">Peso: </label>     
             <input type="number" placeholder="em KG (não use vírgulas)" name="peso" id="peso">
+            <!--Adicionar min="1", max="600" e oninput="validity.valid||(value='');"-->
         </div>
         <div id="freqtreino">
             <label for="treino">Frequência de treino:</label> <!--pesquisar como fazer-->

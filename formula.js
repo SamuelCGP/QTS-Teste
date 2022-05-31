@@ -8,6 +8,11 @@ function calcular(){
     var slt = document.getElementById('treino')
     var value = slt.options[slt.selectedIndex].value 
     
+    /* Substituir esse if por uma função:
+
+    var sexo = document.querySelector('input[name="sexo"]:checked').id 
+
+    você pode mudar também os ids dos botões para "feminino" e "masculino"*/
     if(document.getElementById('feminino').checked){
         var sexo = 'feminino'
     }else if(document.getElementById('masc').checked){
@@ -16,7 +21,8 @@ function calcular(){
         alert('É necessário informar o sexo!')
     }
     
-    // validação pode ser feita na interface HTML e este método permite valores flutuantes
+    // Ao invés desse if, é possível limitar no html
+    // outras validações podem ser feitas em um método separado, por questões de organização
     if(idade <= 0 || idade > 100 || altura <= 0 || altura > 300 || peso <= 0 || peso > 600){
         alert('Informações inválidas')
     }else{
@@ -29,18 +35,23 @@ function calcular(){
         var arredondando = Math.round(TMB)
         res.innerHTML = `${arredondando} Kcal/Dia`
         
-        // Ao invés de fazer essa maracutaia, vamos mudar o estilo pela classe css
+        // Isso poderia ser substituido por uma classe
+        // usando JQuery, é possível adicionar e remover classes com facilidade a um elemento
         res.style.color = 'Green'
         res.style.fontSize = '22pt'
         res.style.textAlign = 'center'
         res.style.fontWeight = '700'
         
+        // Ao invés de criar um botão por código javascript, é possível criar um em HTML
+        // e deixar a visibilidade dele como "none" ou até mesmo usar alguma função do 
+        // JQuery com proposta parecida, como fadeIn ou fadeOut
         const btn = document.createElement('button')
         const btntxt = document.createTextNode('Avançar')
         btn.appendChild(btntxt) 
         document.getElementById('calcular').appendChild(btn)
         
-        // Ao invés de fazer essa maracutaia, vamos mudar o estilo pela classe css
+        // Isso poderia ser substituido por uma classe
+        // usando JQuery, é possível adicionar e remover classes com facilidade a um elemento
         btn.style.padding = '10px 16px'
         btn.style.width = '100%'
         btn.style.backgroundColor = 'green'
@@ -57,11 +68,11 @@ function calcular(){
         button.style.opacity = '0.5'
 
         btn.addEventListener('click', function() {
-            // fazer um caminho relativo e o arquivo ainda não existe
             location.href = "file:///C:/Users/Aluno/Downloads/ProjetoDieta-4.0/tela2/tela2.html";
+            //O diretório está relativo e a segunda tela não existe
         })
 
-        
+        // Código nunca executado
         if(calcular.length){
         }else{
             calcular = null

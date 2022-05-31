@@ -1,5 +1,6 @@
 body{
     height: 1000px;
+    /*height:100hv;*/
     /*background-image: linear-gradient(to bottom right, rgb(134, 255, 134), rgba(133, 172, 255, 0.671), white);   */
     background-color: rgb(46, 42, 53);
 }
@@ -114,8 +115,6 @@ select{
     background-color: white;
     outline: none;
     margin-top: 5px;
-
-    
 }
 select:focus{
     background-color: rgba(250, 250, 250, 0.548);
